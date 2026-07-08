@@ -1,47 +1,95 @@
-body{
+ /* ====== พื้นฐาน ====== */
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     font-family:Arial, sans-serif;
-    background:#f5f5f5;
+    background:linear-gradient(135deg,#b3e5fc,#81d4fa,#4fc3f7,#29b6f6);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+    min-height:100vh;
 }
 
+/* พื้นหลังเคลื่อนไหว */
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* ====== Header ====== */
 header{
-    background:#1e3a8a;
+    background:rgba(13,71,161,0.9);
     color:white;
-    padding:20px;
     text-align:center;
+    padding:25px;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
 }
 
+/* ====== Menu ====== */
 nav{
-    background:#2563eb;
+    background:#1976d2;
     text-align:center;
-    padding:10px;
+    padding:15px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:15px;
+    margin:0 18px;
     font-weight:bold;
+    transition:.3s;
 }
 
 nav a:hover{
-    color:yellow;
+    color:#ffeb3b;
 }
 
+/* ====== กล่องเนื้อหา ====== */
 .container{
     width:80%;
-    margin:auto;
-    background:white;
-    padding:30px;
-    margin-top:20px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.2);
+    margin:35px auto;
+    background:rgba(255,255,255,.9);
+    border-radius:15px;
+    padding:35px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
 }
 
+/* ====== หัวข้อ ====== */
+h2{
+    color:#1565c0;
+    margin-bottom:20px;
+}
+
+p,li{
+    font-size:18px;
+    line-height:1.8;
+}
+
+ul{
+    margin-left:25px;
+}
+
+/* ====== Footer ====== */
 footer{
-    text-align:center;
-    padding:15px;
-    margin-top:20px;
-    background:#1e3a8a;
+    background:#0d47a1;
     color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:30px;
+}
+
+/* ====== Responsive ====== */
+@media(max-width:768px){
+    .container{
+        width:92%;
+    }
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
 }
