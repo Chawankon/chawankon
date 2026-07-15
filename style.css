@@ -112,3 +112,158 @@ footer{
         margin:10px 0;
     }
 }
+/* ====== Animation รูปโปรไฟล์ ====== */
+.profile-img{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    margin:20px auto;
+    border:5px solid #2196f3;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+    /* Animation */
+    animation:float 4s ease-in-out infinite;
+    transition:0.5s;
+}
+
+/* เมื่อเอาเมาส์ไปชี้ */
+.profile-img:hover{
+    transform:scale(1.1) rotate(5deg);
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+/* รูปลอยขึ้นลง */
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+.container{
+    width:80%;
+    margin:35px auto;
+    background:rgba(255,255,255,.9);
+    border-radius:15px;
+    padding:35px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/* ====== Bubble Effect ====== */
+.bubbles{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.bubbles span{
+    position:absolute;
+    bottom:-100px;
+    width:40px;
+    height:40px;
+    background:rgba(255,255,255,.3);
+    border-radius:50%;
+    animation:bubble 15s linear infinite;
+}
+
+/* กำหนดตำแหน่ง */
+.bubbles span:nth-child(1){
+    left:10%;
+    width:30px;
+    height:30px;
+    animation-duration:12s;
+}
+
+.bubbles span:nth-child(2){
+    left:25%;
+    animation-duration:15s;
+}
+
+.bubbles span:nth-child(3){
+    left:40%;
+    width:60px;
+    height:60px;
+    animation-duration:18s;
+}
+
+.bubbles span:nth-child(4){
+    left:55%;
+    animation-duration:13s;
+}
+
+.bubbles span:nth-child(5){
+    left:70%;
+    width:50px;
+    height:50px;
+    animation-duration:16s;
+}
+
+.bubbles span:nth-child(6){
+    left:85%;
+    animation-duration:20s;
+}
+
+.bubbles span:nth-child(7){
+    left:95%;
+    animation-duration:14s;
+}
+
+.bubbles span:nth-child(8){
+    left:5%;
+    animation-duration:17s;
+}
+
+
+/* Animation */
+@keyframes bubble{
+    0%{
+        transform:translateY(0) scale(0.5);
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-110vh) scale(1.2);
+        opacity:0;
+    }
+}nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 18px;
+    font-weight:bold;
+    transition:.4s;
+}
+
+nav a:hover{
+    color:#ffeb3b;
+    text-shadow:
+    0 0 10px #fff,
+    0 0 20px #ffeb3b,
+    0 0 30px #ffeb3b;
+}
