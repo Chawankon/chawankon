@@ -393,3 +393,39 @@ animation-duration:17s;
     }
 
 }
+/* การตั้งค่าพื้นฐานสำหรับหน้ารายการ */
+.container ul {
+    list-style: none; /* เอาจุดกลมๆ ด้านหน้าออก */
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* สไตล์บับเบิลสำหรับแต่ละระดับการศึกษา */
+.container ul li {
+    background-color: #ffffff;      /* สีพื้นหลังของบับเบิล (สีขาว) */
+    color: #2c3e50;                 /* สีตัวอักษร */
+    padding: 15px 25px;             /* ระยะห่างภายในบับเบิล */
+    margin-bottom: 15px;            /* ระยะห่างระหว่างบับเบิล */
+    border-radius: 30px;            /* ความโค้งมนของมุม เพื่อให้ดูเป็นบับเบิล */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงาบางๆ เพิ่มมิติ */
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s; /* เอฟเฟกต์เวลาขยับ */
+    border-left: 5px solid #1abc9c; /* เส้นขอบหนาด้านซ้ายเพิ่มความเด่น (เปลี่ยนสีได้) */
+}
+
+/* เอฟเฟกต์ขยับตอนเอาเมาส์ไปชี้ (Hover) */
+.container ul li:hover {
+    transform: translateY(-3px);     /* ลอยขึ้นเล็กน้อย */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* เงาเข้มขึ้น */
+}
+
+/* เผื่ออยากให้หน้าเว็บมีพื้นหลังสีเทาอ่อน บับเบิลสีขาวจะได้เด่นขึ้น */
+body {
+    background-color: #f4f7f6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
